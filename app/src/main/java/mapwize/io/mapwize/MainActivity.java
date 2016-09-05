@@ -1,14 +1,9 @@
 package mapwize.io.mapwize;
 
-import android.content.Intent;
-import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
 
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
@@ -27,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.activity_toolbar);
         drawer = new DrawerBuilder().withActivity(this).withToolbar(toolbar).withFullscreen(false).build();
-        drawer.getDrawerLayout().setFitsSystemWindows(false);
+        //drawer.getDrawerLayout().setFitsSystemWindows(false);
 
     }
 
