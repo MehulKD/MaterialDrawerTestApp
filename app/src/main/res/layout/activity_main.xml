@@ -24,7 +24,7 @@
             android:layout_marginTop="@dimen/toolbar_margin_top">
 
             <android.support.v7.widget.Toolbar
-                android:id="@+id/mapfragment_toolbar"
+                android:id="@+id/activity_toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:elevation="20dp"

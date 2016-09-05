@@ -10,17 +10,25 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.DrawerBuilder;
+
 public class MainActivity extends AppCompatActivity {
 
     private String MAP_FRAG_TAG = "mapfragmenttag";
-    private TextView toolbar_tv;
-
+    private Toolbar toolbar;
+    private Drawer drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.i("MainActivity", "onCreate");
         setContentView(R.layout.activity_main);
+
+        toolbar = (Toolbar) findViewById(R.id.activity_toolbar);
+        drawer = new DrawerBuilder().withActivity(this).withToolbar(toolbar).withFullscreen(false).build();
+        drawer.getDrawerLayout().setFitsSystemWindows(false);
+
     }
 
     @Override
