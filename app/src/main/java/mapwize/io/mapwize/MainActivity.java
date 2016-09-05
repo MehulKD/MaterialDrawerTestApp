@@ -1,5 +1,7 @@
 package mapwize.io.mapwize;
 
+import android.graphics.Color;
+import android.support.design.widget.CoordinatorLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -18,12 +20,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Log.i("MainActivity", "onCreate");
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_solution_1);
+        //setContentView(R.layout.activity_main_solution_2);
 
         toolbar = (Toolbar) findViewById(R.id.activity_toolbar);
-        drawer = new DrawerBuilder().withActivity(this).withToolbar(toolbar).withFullscreen(false).build();
-        //drawer.getDrawerLayout().setFitsSystemWindows(false);
+        drawer = new DrawerBuilder().withActivity(this).withToolbar(toolbar).build();
 
+        //we have to make the StatusBar of the coordinatorLayout transparent as it will drawer over our background otherwise
+        ((CoordinatorLayout)findViewById(R.id.coordinatorLayout)).setStatusBarBackgroundColor(Color.TRANSPARENT);
     }
 
     @Override
